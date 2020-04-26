@@ -1,0 +1,7 @@
+# Releases
+release
+
+# Object code and executables
+tester/*.o
+main
+main.exe
