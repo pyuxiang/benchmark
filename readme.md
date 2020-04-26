@@ -53,33 +53,33 @@ interface must be fully implemented, according to the specified method signature
 // Singly-linked list, vector
 template<typename T>
 class Stack {
-             void push(T)
-             void pop()
-                T top()
-             bool empty()
-     unsigned int size()
+             void push(T);
+             void pop();
+                T top();
+             bool empty();
+     unsigned int size();
 };
 
 // Heap
 template<typename T>
 class PriorityQueue {
-             void push(T)
-             void pop()
-                T top()
-             bool empty()
-     unsigned int size()
+             void push(T);
+             void pop();
+                T top();
+             bool empty();
+     unsigned int size();
 };
 
 // AVL tree
 template<typename T>
 class Set {
-             void insert(T)
-             void erase()
-             bool contains(T)
-          list<T> full_range() // in-order traversal across whole tree
-          list<T> range(T, T)  // in-order traversal between [arg1,arg2)
-             bool empty()
-     unsigned int size()
+             void insert(T);
+             void erase();
+             bool contains(T);
+          list<T> full_range(); // in-order traversal across whole tree
+          list<T> range(T, T);  // in-order traversal between [arg1,arg2)
+             bool empty();
+     unsigned int size();
 };
 
 ```
