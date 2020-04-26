@@ -60,6 +60,16 @@ class Stack {
      unsigned int size();
 };
 
+// Singly-linked list
+template<typename T>
+class Queue {
+             void push(T);
+             void pop();
+                T front();
+             bool empty();
+     unsigned int size();
+};
+
 // Heap
 template<typename T>
 class PriorityQueue {
@@ -76,8 +86,8 @@ class Set {
              void insert(T);
              void erase();
              bool contains(T);
-          list<T> full_range(); // in-order traversal across whole tree
-          list<T> range(T, T);  // in-order traversal between [arg1,arg2)
+     std::list<T> full_range(); // in-order traversal across whole tree
+     std::list<T> range(T, T);  // in-order traversal between [arg1,arg2)
              bool empty();
      unsigned int size();
 };
