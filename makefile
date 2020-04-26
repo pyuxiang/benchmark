@@ -29,7 +29,7 @@ CCFLAGS:=-std=c++11 -Wall -I%CATCH_SINGLE_INCLUDE% # consider -Wl,--stack=NNN
 .SILENT: all build run clean release
 
 ifeq ($(OS),Windows_NT)
-all:main
+all:
 	make.bat
 build:
 	make.bat build

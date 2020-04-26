@@ -13,13 +13,18 @@ set SRC_DIR=implementations
 set TEST_DIR=tester
 set TARGET=main
 
-set CATCH_FLAGS=-x 5
-set CCFLAGS=-std=c++11 -Wall -I$(CATCH_SINGLE_INCLUDE)
 set CLASSES=
 set TESTS=
+set TEST_CASES=
 for %%f in ( %SRC_DIR%\*.cpp ) do (
     call :concat %%~nf %TEST_DIR%\test-%%~nf.cpp
 )
+
+if not ["%TEST_CASES%"]==[""] (
+    set TEST_CASES=%TEST_CASES:~1%
+)
+set CATCH_FLAGS=-x 5 %TEST_CASES%
+set CCFLAGS=-std=c++11 -Wall -I$(CATCH_SINGLE_INCLUDE)
 
 if [%1]==[clean] (
     if exist %TARGET%.exe del %TARGET%.exe
@@ -60,6 +65,7 @@ goto :eof
 :concat
 set CLASSES=%CLASSES% %1
 set TESTS=%TESTS% %2
+set TEST_CASES=%TEST_CASES%,[%1]
 goto :eof
 
 :release
