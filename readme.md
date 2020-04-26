@@ -6,7 +6,9 @@ by benchmarking against the C++ STL. For pedagogical purposes only.
 
 ## Getting started
 
-Download any available release `tester-YYYYMMDD.tar` and unpack the archive.
+Either `git clone` this repository, or download any available releases `tester-YYYYMMDD.tar`
+and unpack the archive (essentially a zipped version of the repository).
+
 Open a shell environment (e.g. `cmd`/`PowerShell` for Windows, `Terminal` for MacOS)
 in the root directory of the package (i.e. together with the `makefile` and `make.bat`),
 and run the following command:
